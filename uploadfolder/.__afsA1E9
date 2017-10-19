@@ -1,0 +1,9 @@
+array_fill — Fill an array with values
+array_chunk — Split an array into chunks
+array_diff_assoc — Computes the difference of arrays with additional index check
+array_diff_ukey — Computes the difference of arrays using a callback function on the keys for comparison
+array_keys — Return all the keys or a subset of the keys of an array
+array_pop — Pop the element off the end of array
+array_search — Searches the array for a given value and returns the first corresponding key if successful
+array_count_values — Counts all the values of an array
+sort — Sort an array
