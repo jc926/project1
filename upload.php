@@ -10,10 +10,11 @@ class upload extends page{
     public function get(){
      
       $form = '<form method="POST" enctype="multipart/form-data">';
-      $this->html .= 'Select file from your local: <br><br>';
+      
       $form .= '<input type="file" name="file">';
       $form .= '<input type="submit" name="upload" value=" Start uploading">';
       $form .= '</form>';
+      $this->html .= 'Select file from your local: <br><br>';
       $this->html .= $form;
     }
 
@@ -42,7 +43,8 @@ class upload extends page{
                         $file_destination =  'uploadfolder/' . $file_name_new;
                         // echo $file_destination;
                         if (move_uploaded_file($file_tmp, $file_destination)) {
-                                echo "File uploaded";
+                                echo "File was uploaded Sucessfully";
+                                header('Location: index.php?page=display&filename = $file_name');
                         }
                         
                 }
@@ -54,6 +56,9 @@ class upload extends page{
 
 
 }
+
+
+
 
 
 ?>
