@@ -12,6 +12,7 @@ class Manage {
     public static function autoload($class) {
         //you can put any file name or directory here
         include $class . '.php';
+        
     }
 }
 

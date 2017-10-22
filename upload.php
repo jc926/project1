@@ -11,7 +11,7 @@ class upload extends page{
      
       $form = '<form method="POST" enctype="multipart/form-data">';
       
-      $form .= '<input type="file" name="file">';
+      $form .= '<input type="file" name="file" id="file">';
       $form .= '<input type="submit" name="upload" value=" Start uploading">';
       $form .= '</form>';
       $this->html .= 'Select file from your local: <br><br>';
@@ -44,7 +44,8 @@ class upload extends page{
                         // echo $file_destination;
                         if (move_uploaded_file($file_tmp, $file_destination)) {
                                 echo "File was uploaded Sucessfully";
-                                header('Location: index.php?page=display&filename = $file_name');
+                                //header('Location: index.php?page=display&filename = ');
+                                header('Location: index.php?page=display&filename=' . $_FILES['file']['name']);
                         }
                         
                 }
